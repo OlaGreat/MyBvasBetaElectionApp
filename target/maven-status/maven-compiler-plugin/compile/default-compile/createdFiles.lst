@@ -1,0 +1,14 @@
+Africa\semicolon\bvasbeta\models\Voter.class
+Africa\semicolon\bvasbeta\repositories\BvasBetaVoterRepository.class
+Africa\semicolon\bvasbeta\repositories\BvasBetaAddressRepository.class
+Africa\semicolon\bvasbeta\models\Address.class
+Africa\semicolon\bvasbeta\repositories\VoterRepository.class
+Africa\semicolon\bvasbeta\repositories\PartyRepository.class
+Africa\semicolon\bvasbeta\repositories\AddressRepository.class
+Africa\semicolon\bvasbeta\repositories\BvasBetaAdminRepository.class
+Africa\semicolon\bvasbeta\models\Gender\Gender.class
+Africa\semicolon\bvasbeta\repositories\AdminRepository.class
+Africa\semicolon\bvasbeta\models\Party.class
+Africa\semicolon\bvasbeta\models\Admin.class
+Africa\semicolon\bvasbeta\models\UserInformation.class
+Africa\semicolon\bvasbeta\repositories\BvasBetaPartyRepository.class
