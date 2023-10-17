@@ -58,14 +58,13 @@ class BvasBetaPartyRepositoryTest {
         party.setUserInformation(userInformation);
         partyRepository.save(party);
 
-
         Party partyLp = new Party();
         UserInformation userInformation2 = new UserInformation("Lp","3","Lp");
         partyLp.setUserInformation(userInformation2);
         partyRepository.save(partyLp);
         assertEquals(2,partyRepository.getNumberOfRegisteredParty());
 
-        partyRepository.deleteById("2");
+        partyRepository.deleteById(party.getId());
         assertEquals(1,partyRepository.getNumberOfRegisteredParty());
     }
 

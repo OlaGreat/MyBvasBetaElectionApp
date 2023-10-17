@@ -1,6 +1,7 @@
 package Africa.semicolon.bvasbeta.repositories;
 
 import Africa.semicolon.bvasbeta.models.Admin;
+import Africa.semicolon.bvasbeta.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +21,9 @@ public class BvasBetaAdminRepository implements AdminRepository{
     }
 
     private void saveAdmin(Admin admin) {
-        admin.setId(generateId());
+        admin.setId(AppUtils.generatedId());
         adminsList.add(admin);
     }
-
-    private String generateId() {
-        return Integer.toString(adminsList.size()+1);
-    }
-
 
     private void updateAdmin(Admin admin) {
         Admin savedAdmin = findById(admin.getId());
@@ -43,16 +39,15 @@ public class BvasBetaAdminRepository implements AdminRepository{
 
     @Override
     public List<Admin> findAll() {
-        return null;
+        return adminsList;
     }
 
 
 
     @Override
     public void deleteById(String id) {
-        Admin foundAdmin = null;
-        for(Admin savedAdmin : adminsList){if(savedAdmin.getId().equals(id))foundAdmin = savedAdmin;}
-        adminsList.remove(foundAdmin);
+        Admin foundAdmin = findById(id);
+        if (foundAdmin!=null)adminsList.remove(foundAdmin);
     }
 
     @Override

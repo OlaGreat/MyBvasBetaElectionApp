@@ -61,7 +61,8 @@ class BvasBetaAdminRepositoryTest {
         admin2.setUserInformation(userInformation2);
         adminRepository.save(admin2);
         assertEquals(2,adminRepository.getNumberOfAdmin());
-        adminRepository.deleteById("2");
+
+        adminRepository.deleteById(admin2.getId());
         assertEquals(1,adminRepository.getNumberOfAdmin());
 
     }

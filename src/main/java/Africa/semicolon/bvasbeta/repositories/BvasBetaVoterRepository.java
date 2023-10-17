@@ -54,10 +54,8 @@ public class BvasBetaVoterRepository implements VoterRepository{
 
     @Override
     public void deleteById(String id) {
-        Voter foundVoter = null;
-        for(Voter savedVoter : voters){if(savedVoter.getId().equals(id)){foundVoter = savedVoter;}
-        }
-        voters.remove(foundVoter);
+        Voter foundVoter = findById(id);
+        if (foundVoter!= null)voters.remove(foundVoter);
     }
     @Override
     public int numbersOfRegisteredVoters(){

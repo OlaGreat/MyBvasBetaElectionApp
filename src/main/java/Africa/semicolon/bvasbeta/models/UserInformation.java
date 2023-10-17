@@ -1,5 +1,7 @@
 package Africa.semicolon.bvasbeta.models;
 
+import Africa.semicolon.bvasbeta.repositories.AddressRepository;
+import Africa.semicolon.bvasbeta.repositories.BvasBetaAddressRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
